@@ -45,8 +45,9 @@ main{
     grid-template-rows: auto auto;
     gap: 5px;
 }
-h2{
-    grid-column: 1/3;
+.wdd-tag{
+    display: inline;
+    grid-column: auto;
 }
 h3{
     text-align: center;
@@ -58,7 +59,7 @@ h3{
     font-family: Merriweather, "Times New Roman", Times, serif;
     border: 1px solid #000;
     padding: 0;
-    grid-row: 3/4;
+    grid-row: 2/3;
 }
 li{
     list-style: none;
