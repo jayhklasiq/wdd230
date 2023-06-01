@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima&family=Noto+Sans+Georgian:wght@300&display=swap');
+
+body{
+    text-align: center;
+}
+
+header{
+    background-color: #00B4D8;
+}
+
+h2{
+    background-color: #0077B6;
+}
+
+h3{
+    background-color: #CAF0F8;
+}
+
+.arima{
+    font-family: Arima, sans-serif;
+}
+
+.noto-san{
+    font-family: "Noto Sans Georgian";
+}
+
+table{
+    display: table;
+    text-align: center;
+    border-spacing: 2px;
+    margin: 0 auto;
+    padding: 30px
+}
+
+.primary{
+    background-color: #00B4D8;
+}
+
+.secondary{
+    background-color: #0077B6;
+}
+
+.accent1{
+    background-color: #CAF0F8;
+}
