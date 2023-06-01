@@ -2,18 +2,20 @@
 
 body{
     text-align: center;
+    max-width: auto;
 }
 
 header{
-    background-color: #00B4D8;
+    background-color: #252422;
+    color: white;
 }
 
 h2{
-    background-color: #0077B6;
+    background-color: #a3b18a;
 }
 
 h3{
-    background-color: #CAF0F8;
+    background-color: #dad7cd;
 }
 
 .arima{
