@@ -6,13 +6,13 @@ header, main, footer {
     max-width: 640px;
     margin: 1rem auto;
     padding: 0.5rem;
-    border-color: aliceblue;
+    border: 1px aliceblue;
     background-color: #a2d2ff;
 }
 
 main{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
 
