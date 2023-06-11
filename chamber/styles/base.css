@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima&family=Noto+Sans+Georgian:wght@300&display=swap');
+body{
+    font-family: "Noto Sans Georgian";
+}
+img{
+    max-width: 100%;
+    max-height: auto;
+}
+h1{
+    font-family: "Arima";
+    text-align: center;
+}
+
+
+
+.navigation a:hover, navigation a:active{
+    color: #3a5a40;
+    background-color: #dad7cd;
+}
+
+header,nav,.newsletter-box, .weather-card{
+    background-color: #CAF0F8
+}
+.socials{
+    display: inline-flex;
+    flex-direction: rows;
+    justify-content: space-around;
+    max-width: 100px;
+}
+.weather-card, .newsletter-box, footer{
+    border: 1px;
+    padding: 1rem, 1px;
+    margin: 1rem, auto;
+}
+main{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr auto auto;
+    grid-gap: .75rem;
+}
+.newsletter-box{
+    grid-row: 1/2;
+}
+.weather-card{
+    grid-row: 2/3;
+}
+.current-events{
+    grid-row: 3/4;
+}
+.adverts{
+    grid-row: 4/5;
+}
+
+footer{
+    text-align: center;
+    color: #00B4D8;
+    background-color: black;
+    padding: .5rem;
+}
