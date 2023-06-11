@@ -1,5 +1,18 @@
-@media screen and (min-width: 768px) {
-    body {
-      max-width: 100%;
+@media screen and (min-width: 37.5rem) {
+  
+    .navigation{
+      display: flex;
+      flex-direction: row;
+      background-color: #a3b18a; 
+    }
+    .navigation li {
+      display: block;
+      flex: 1 1 100%;
+    }
+    .navigation a{
+      text-align: center;
+    }
+    .nav-menu{
+      display: none;
     }
 }

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Oswald:wght@500&family=Playfair:ital,wght@0,300;1,300&display=swap');
 
-body{
-    max-width: 100%;
-}
 
 header{
     display: flex;
@@ -21,21 +18,63 @@ h1{
     align-items: center;
     color: white;
 }
+
+.mode {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 10px;
+	cursor: pointer;
+    color: whitesmoke;
+}
+
 nav{
+    background-color: #a3b18a;  
+}
+.nav-menu{
+    /* display: block; */
+    border: none;
+	font-size: 2rem;
+	/* font-weight:700; */
+	padding: 3px 7px 6px;
+    background-color: #a3b18a;
+}
+.nav-menu::before{
+    content: "≡";
+}
+.navigation {
     display: flex;
-    justify-content: space-evenly;
-    background-color: #a3b18a;   
+    flex-direction: column;
+	list-style: none;
+	margin: 0;
+	/* max-width: 760px; */
 }
-nav a{
-    text-decoration: none;
-    font-size: large;
-    font-family: Merriweather, 'Times New Roman', Times, serif;
-    padding: 15px;
-   
+.navigation li{ 
+    display: none;
 }
-nav a:hover{
+.navigation a {
+    display:block;
+    padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	font-weight: 700;
+	/* transition: 0.5s; */
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+.navigation a:hover, navigation a:active{
     color: #3a5a40;
     background-color: #dad7cd;
+}
+.open li {
+	display: block;
+    width: 100%;
+}
+.open li a {
+    display: block;
+}
+
+.nav-menu.open::before {
+	content: "X";
 }
 main{
     width: 100%; 
@@ -43,10 +82,12 @@ main{
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     gap: 5px;
+    background-color: white;
+    color: #000;
 }
 .wdd-tag{
-    display: inline;
-    grid-column: auto;
+    display: block;
+    grid-column: 1/3;
 }
 h3{
     text-align: center;
@@ -60,8 +101,9 @@ h3{
     padding: 0;
     grid-row: 2/3;
 }
-li{
+.la{
     list-style: none;
+    font-size: 12px;
 }
 
 footer {
