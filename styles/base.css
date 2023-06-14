@@ -66,6 +66,9 @@ nav{
     color: #3a5a40;
     background-color: #dad7cd;
 }
+.navigation a:visited{
+    color: greenyellow;
+}
 .open li {
 	display: block;
     width: 100%;
