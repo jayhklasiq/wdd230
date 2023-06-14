@@ -80,7 +80,7 @@ nav{
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: auto 1fr auto auto auto;
     gap: 5px;
     background-color: white;
     color: #000;
@@ -137,6 +137,7 @@ h3{
 
 }
 .info{
+    text-align: center;
    grid-column: 1/3;
    grid-row: 4/5;
 }
@@ -149,6 +150,21 @@ h3{
 .la{
     list-style: none;
     font-size: 12px;
+}
+
+.map{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-column: 1/3;
+    grid-row: 5/6;
+
+}
+
+.map iframe {
+    width: 100%;
+    height: 500px; /* Set a fixed height or adjust as needed */
+    border: 0;
 }
 
 footer {

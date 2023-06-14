@@ -56,5 +56,15 @@ modeButton.addEventListener("click", () => {
 // 	}
 // });
 
+// Get the visit count from localStorage or initialize it to 0
+let visitCount = localStorage.getItem("visitCount") || 0;
 
+// Increment the visit count
+visitCount++;
+
+// Update the span element with the visit count
+document.getElementById("visitCount").textContent = visitCount;
+
+// Store the updated visit count in localStorage
+localStorage.setItem("visitCount", visitCount);
 
