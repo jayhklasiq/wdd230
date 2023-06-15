@@ -3,34 +3,62 @@ body{
     font-family: "Noto Sans Georgian";
 }
 img{
-    max-width: 100%;
-    max-height: auto;
+    width: 100%;
+    height: auto;
 }
 h1{
     font-family: "Arima";
     text-align: center;
 }
 
+nav{
+    background-color: #5CE1E6;  
+}
 
+/* Collapsing navigation on moblie screen */
+.nav-menu{
+    border: none;
+    font-size: 2rem;
+    padding: 3px 7px 6px;
+    background-color: #5CE1E6;
+    cursor: pointer;
+}
 
+.nav-menu::before{
+    content: "≡";
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+}
+.navigation li{
+    display: none;
+}
+.navigation a{
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+	text-decoration: none;
+}
 .navigation a:hover, navigation a:active{
-    color: #3a5a40;
-    background-color: #dad7cd;
+    color: #0077B6;
+    background-color: #CAF0F8;
 }
 
-header,nav,.newsletter-box, .weather-card{
-    background-color: #CAF0F8
+.open li{
+    display: block;
+    width: 100%;
 }
-.socials{
-    display: inline-flex;
-    flex-direction: rows;
-    justify-content: space-around;
-    max-width: 100px;
+.open li a{
+    display: block;
 }
-.weather-card, .newsletter-box, footer{
-    border: 1px;
-    padding: 1rem, 1px;
-    margin: 1rem, auto;
+.nav-menu.open::before{
+    content: "X";
 }
 main{
     text-align: center;
@@ -38,6 +66,17 @@ main{
     grid-template-rows: 1fr 1fr auto auto;
     grid-gap: .75rem;
 }
+
+header,.newsletter-box, .weather-card{
+    background-color: #CAF0F8
+}
+
+.weather-card, .newsletter-box, footer{
+    border: 1px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
 .newsletter-box{
     grid-row: 1/2;
 }
@@ -56,4 +95,10 @@ footer{
     color: #00B4D8;
     background-color: black;
     padding: .5rem;
+}
+.socials{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 100px;
 }

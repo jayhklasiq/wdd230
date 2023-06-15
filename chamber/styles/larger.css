@@ -1,11 +1,42 @@
-@media screen and (min-width: 512px){
-    main{
+@media (min-width: 600px){
+    
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #5CE1E6; 
+      }
+      .navigation li {
+        display: block;
+        flex: 1 1 100%;
+      }
+      .navigation a{
+        text-align: center;
+        text-decoration: none;
+      }
+      .nav-menu{
+        display: none;
+      }
+      .join{
+        font-weight: 700;
+        font-size: 40px;
+        color: #00B4D8;
+        text-align: center;
+      }
+
+      .join a{
+        text-decoration: none;
+      }
+      main{
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    
     .newsletter-box{
         grid-column: 1/2;
         grid-row: 1/2;
