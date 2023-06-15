@@ -46,11 +46,11 @@
     padding: 0;
     grid-row: 3/4;
   }
-  .learnings{
+  main div.learnings{
     grid-column: 1/2;
    grid-row: 3/4;
 }
-  .info{
+  main div .info{
     grid-column: 2/3;
     grid-row: 3/4;
  }
