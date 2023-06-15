@@ -27,7 +27,6 @@
         color: #00B4D8;
         text-align: center;
       }
-
       .join a{
         text-decoration: none;
       }
@@ -54,5 +53,4 @@
         grid-column: 2/3;
         grid-row: 2/3;
     }
-    
 }
