@@ -94,11 +94,28 @@ footer{
     text-align: center;
     color: #00B4D8;
     background-color: black;
-    padding: .5rem;
 }
 .socials{
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
     max-width: 100px;
+}
+
+
+/* For the Discovery Page! */
+.discovery-main {
+    flex-wrap: wrap;
+    grid-template-rows: 1fr;
+}
+.message{
+    font-family: Arima, sans-serif;
+    font-weight: 700;
+}
+.map,
+.calendar,
+.mainarea {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
 }
