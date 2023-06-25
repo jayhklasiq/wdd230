@@ -19,27 +19,27 @@ navBtn.addEventListener('click', () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Get the current date
-  let currentDate = new Date();
+  // Get the current date (without time)
+  let currentDate = new Date().toLocaleDateString();
 
   // Retrieve the last visit date from localStorage
   let lastVisit = localStorage.getItem('lastVisit');
 
   // Set the current date as the last visit date in localStorage
-  localStorage.setItem('lastVisit', currentDate.toISOString());
+  localStorage.setItem('lastVisit', currentDate);
 
   // Calculate the time difference between visits
   let timeDiff = 0;
   if (lastVisit) {
-    let prevVisit = new Date(lastVisit);
-    timeDiff = Math.floor((currentDate - prevVisit) / (1000 * 60 * 60 * 24));
+    let prevVisit = new Date(lastVisit).toLocaleDateString();
+    timeDiff = Math.floor((new Date(currentDate) - new Date(prevVisit)) / (1000 * 60 * 60 * 24));
   }
 
   // Get the sidebar content element
   let sidebarContent = document.querySelector('.message');
 
   // Display appropriate message based on the time between visits
-  if (timeDiff === 0) {
+  if (!lastVisit) {
     sidebarContent.innerHTML = '<p>Welcome! Let us know if you have any questions.</p>';
   } else if (timeDiff < 1) {
     sidebarContent.innerHTML = '<p>Back so soon! Awesome!</p>';
@@ -48,3 +48,4 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebarContent.innerHTML = '<p>You last visited ' + timeDiff + ' ' + daysText + ' ago.</p>';
   }
 });
+
