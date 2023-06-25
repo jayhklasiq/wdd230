@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let sidebarContent = document.querySelector('.message');
 
   // Display appropriate message based on the time between visits
-  if (!lastVisit) {
+  if (timeDiff === 0) {
     sidebarContent.innerHTML = '<p>Welcome! Let us know if you have any questions.</p>';
   } else if (timeDiff < 1) {
     sidebarContent.innerHTML = '<p>Back so soon! Awesome!</p>';
@@ -48,4 +48,3 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebarContent.innerHTML = '<p>You last visited ' + timeDiff + ' ' + daysText + ' ago.</p>';
   }
 });
-
