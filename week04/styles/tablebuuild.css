@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200&display=swap');
+table{
+    text-align: center;
+    font-family: Geologica;
+    border-collapse: collapse;
+}
+
+th:nth-of-type(1) {
+  background-color: black;
+  border-top: none;
+}
+
+td, th{
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tr > td{
+    color: black;
+    font-weight: 800;
+    font-size: large;
+}
+
+tr th{
+    background-color: grey;
+    font-weight: 800;
+    font-size: larger;
+    padding: 1rem;
+    color: white;
+}
