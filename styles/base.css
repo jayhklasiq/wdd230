@@ -139,6 +139,9 @@ h3{
     list-style: none;
     font-size: 12px;
 }
+.la a{
+    text-decoration: none;
+}
 .map{
     width: 100%;
     max-width: 1000px;
