@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua O. Olaoye - WDD 230 - Web Frontend Development</title>
+    <title>Joshua O. Olaoye - Form Page</title>
     <meta name="description" content="This is Joshua Olaoye's Form Page for WDD 230 - Web Frontend Development.">
     <meta name="author" content="Joshua O. Olaoye">
     <meta property="og:title" content="Form page for WDD230">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/form.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather&family=Oswald:wght@500&family=Playfair:ital,wght@1,300&display=swap');
+    </style>
     <link rel="icon" href="images/favicon-16x16.ico">
 </head>
 <body>
@@ -42,7 +45,7 @@
                 <label>Username*<input type="text" id="username" name="username" required></label>
                 <label>Password*<input type="password" id="password" name="password" required pattern="(?=.*[0-9])[a-zA-Z0-9]{8,}" title="Must contain 8 or more characters and at least a number."></label>
                 <label>Re-enter Password*<input type="password" id="rt-password" name="rt-password" required title="Must match Password." ></label>
-                <label>Email*<input type="text" id="email" name="email" title="Please enter a valid byui email address" placeholder="someone@byui.edu" required></label>
+                <label>Email*<input type="email" id="email" name="email" title="Please enter a valid byui email address" placeholder="someone@byui.edu" required></label>
                 <label>Rate Page
                     <span id="displayRange">0</span>
                     <input type="range" id="range" name="range" min="0" max="10" value="0">
