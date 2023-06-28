@@ -164,3 +164,56 @@ footer {
 #lastModified {
     color: greenyellow;
 }
+
+/* Form Page */
+form{
+    padding-top: 1rem;
+}
+form fieldset{
+    font-family: Verdana, sans-serif;
+    color: #252422;
+    border: 1px solid #252422;
+    border-radius: 5px;
+}
+form legend{
+    padding: .25rem;
+    margin: 1rem 0;
+}
+form label{
+    display: block;
+    padding-bottom: 1rem;
+}
+form label input{
+    display: block;
+    padding: .75rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 20rem;
+}
+form label input#username, form label input#password, form label input#email{
+    border-left: 5px solid red;
+}
+form label input#username:valid, form label input#password:valid, form label input#email:valid{
+    border-left: 5px solid #a3b18a;
+}
+
+form .submitBtn{
+    margin-top: 1rem;
+    width: 100%;
+    padding: .75rem 2%;
+    border: #000 1px solid;
+    border-radius: 5px;
+    font-family: Verdana, sans-serif;
+    max-width: 22rem;
+    background-color: #a3b18a;
+}
+#notify{
+    visibility: hidden;
+    padding: .5rem;
+    color: red;
+}
+
+/* form label input#rt-password:invalid{
+    background-color: #fff0f3;
+} */

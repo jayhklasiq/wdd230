@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua O. Olaoye - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="This is Joshua Olaoye's course assignment portal for WDD 230 - Web Frontend Development.">
+    <meta name="author" content="Joshua O. Olaoye">
+    <meta property="og:title" content="WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This is Joshua Olaoye's Home page for WDD230">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b6/A_drone_footage_of_Accra_central%2C_Ghana.jpg">
+    <meta property="og:url" content="https://jayhklasiq.github.io/wdd230/">
+    <script src="scripts/getDates.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/favicon-16x16.ico">
+</head>
+<body>
+    <header>
+        <img src="images/my-ai-portrait.webp" alt="my ai portrait" loading="lazy"> 
+        <h1>Joshua O. Olaoye</h1>
+        <div class="mode">Dark Mode</div>
+    </header>
+    <nav>
+    <button class="nav-menu"></button>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html" target="_blank">Site Plan</a></li>
+            <li><a href="">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form method="get" action="record.html">
+            <fieldset>
+                <div id="notify"></div>
+                <legend>Page Rating</legend>
+                <label>Username*<input type="name" id="username" name="username" required></label>
+                <label>Password*<input type="password" id="password" name="password" required pattern="(?=.*[0-9])[a-zA-Z0-9]{8,}" title="Must contain 8 or more characters and at least a number."></label>
+                <label>Re-enter Password*<input type="password" id="rt-password" name="rt-password" required title="Must match Password." ></label>
+                <label>Email*<input type="email" id="email" name="email" title="Please enter a valid byui email address" placeholder="someone@byui.edu" required></label>
+                <label>Rate Page
+                    <div id="displayRange">0</div>
+                    <input type="range" id="range" name="range" min="0" max="10" value="0">
+                    <datalist>
+                        <!-- <option value="0">0</option> -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
+                </label>
+            </fieldset>
+            <input type="submit" value="Complete Rating" class="submitBtn">
+        </form>
+    </main>
+    <footer>
+        <p>
+          &copy;<span id="currentYear"></span> Joshua O. Olaoye, Accra, Ghana.</p>
+        <p id="lastModified"></p>
+      </footer>
+</body>
+</html>
