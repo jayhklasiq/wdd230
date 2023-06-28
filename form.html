@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles\form.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="icon" href="images/favicon-16x16.ico">
 </head>
 <body>
@@ -37,14 +37,14 @@
     <main>
         <form method="get" action="record.html">
             <fieldset>
-                <div id="notify"></div>
+                <span id="notify"></span>
                 <legend>Page Rating</legend>
-                <label>Username*<input type="name" id="username" name="username" required></label>
+                <label>Username*<input type="text" id="username" name="username" required></label>
                 <label>Password*<input type="password" id="password" name="password" required pattern="(?=.*[0-9])[a-zA-Z0-9]{8,}" title="Must contain 8 or more characters and at least a number."></label>
                 <label>Re-enter Password*<input type="password" id="rt-password" name="rt-password" required title="Must match Password." ></label>
                 <label>Email*<input type="text" id="email" name="email" title="Please enter a valid byui email address" placeholder="someone@byui.edu" required></label>
                 <label>Rate Page
-                    <div id="displayRange">0</div>
+                    <span id="displayRange">0</span>
                     <input type="range" id="range" name="range" min="0" max="10" value="0">
                     <datalist>
                         <!-- <option value="0">0</option> -->
