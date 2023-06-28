@@ -107,18 +107,26 @@ if (form) {
 			email.style.borderLeft = "5px solid #a3b18a";
 		}
 
+		const pageRange = document.getElementById("range");
+		const displayRange = document.getElementById("displayRange");
+		pageRange.addEventListener("change", displayRatingValue);
+		pageRange.addEventListener("input", displayRatingValue);
+
+		function displayRatingValue() {
+			displayRange.innerHTML = pageRange.value;
+		}
+
+		if (pageRange.value <= 0) {
+			message.textContent = "You haven't rated this page yet.";
+			message.style.visibility = "visible";
+			pageRange.focus();
+			return;
+		}
+
 		// If all validations pass, submit the form
 		form.submit();
 	});
-	const pageRange = document.getElementById("range");
-	const displayRange = document.getElementById("displayRange");
-	pageRange.addEventListener("change", displayRatingValue);
-	pageRange.addEventListener("input", displayRatingValue);
 
-	function displayRatingValue() {
-		displayRange.innerHTML = pageRange.value;
-
-	}
 }
 
 

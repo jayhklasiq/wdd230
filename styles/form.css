@@ -50,3 +50,9 @@ form .submitBtn{
 /* form label input#rt-password:invalid{
     background-color: #fff0f3;
 } */
+
+:root{
+    --font-size: 16px;
+    --placeholder:var(--font-size: 14px) var(--color: black);
+    --font-family: "Times New Roman"
+}
