@@ -49,3 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+if (form){
+    document.getElementById('timestamp').value = new Date().toISOString();
+}
+
