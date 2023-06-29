@@ -144,7 +144,7 @@ footer{
 }
 
 /* For the Join Page */
-.join-main, .tk-page{
+.join-main{
     display: block;
 }
 form fieldset legend{
@@ -182,7 +182,7 @@ form label input:required:valid{
 form label #membership-level, form label::placeholder{
     font-size: 16px;
 }
-form label textarea #business-description{
+textarea{
     display: block;
     width: 355px;
     height: 125px;
@@ -202,6 +202,14 @@ form .submitButton{
     max-width: 22rem;
     background-color: #5CE1E6;
 }
-/* form label textarea #business-description{
-    text-align: left;
-} */
+.membership-benefits div li{
+    list-style: none;
+}
+.membership-benefits div p{
+    font-weight: 800;
+    font-size: large;
+}
+/* For Thank YOU Page */
+.tk-page{
+    display: block;
+}
