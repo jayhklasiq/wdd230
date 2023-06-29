@@ -100,7 +100,9 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     max-width: 100px;
+
 }
+
 
 
 /* For the Discovery Page! */
@@ -180,11 +182,12 @@ form label input:required:valid{
 form label #membership-level, form label::placeholder{
     font-size: 16px;
 }
-form textarea{
+form label textarea #business-description{
     display: block;
+    width: 355px;
+    height: 125px;
     border: 1px solid #0077B6;
     border-radius: 5px;
-    padding: 0 0 5% 14em;   
 }
 
 form .submitButton{
@@ -199,3 +202,6 @@ form .submitButton{
     max-width: 22rem;
     background-color: #5CE1E6;
 }
+/* form label textarea #business-description{
+    text-align: left;
+} */
