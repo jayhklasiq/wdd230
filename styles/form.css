@@ -53,6 +53,6 @@ form .submitBtn{
 
 :root{
     --font-size: 16px;
-    --placeholder:var(--font-size: 14px) var(--color: black);
+    --placeholder: 16px;
     --font-family: "Times New Roman"
 }
