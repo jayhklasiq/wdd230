@@ -55,8 +55,6 @@
         grid-column: 2/3;
         grid-row: 2/3;
     }
-
-
 /* For the Discovery Page! */
     .mainarea, .sidebar{
       width: 100%;
@@ -82,8 +80,6 @@
       transform: scale(1.1);
       transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
-
-
     /* For form page */
 
     .join-main{
