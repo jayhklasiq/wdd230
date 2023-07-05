@@ -1,0 +1,18 @@
+{
+    "family name": "The Olaoye's",
+    "Record Transfer Date": 2021,
+    "Number of records": 2,
+    "visited by Bishop": true,
+    "members": [
+        {
+            "name": "Joshua Owolabi Olaoye",
+            "gender": "Male",
+            "Birthday": "31-10-1999"
+        },
+        {
+            "name": "Erica Serwaa Edudzi Agbeko",
+            "gender": "Female",
+            "Birthday": "13-02-1993"
+        }
+    ]
+}
