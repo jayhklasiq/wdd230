@@ -74,7 +74,7 @@ nav{
 }
 main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto auto auto;
     gap: 5px;
     background-color: white;
