@@ -18,20 +18,29 @@ async function getLinks() {
   }
 }
 function displayLinks(weeks) {
-  const learningsList = document.querySelectorAll('.la');
-  weeks.forEach((week, index) => {
-    const listItem = learningsList[index];
-    listItem.innerHTML = `${week.week}: `;
-    week.links.forEach((link, linkIndex) => {
-      const anchor = document.createElement('a');
+  const activitiesList = document.querySelector(".learnings ul");
+  activitiesList.innerHTML = "";
+  weeks.forEach((week, index) => { // Add an index parameter to the forEach loop
+    const listItem = document.createElement("li");
+    listItem.classList.add("la");
+    listItem.textContent = `Week ${index + 1}: `; // Increment the index by 1 to start from 1
+
+    week.links.forEach((link, i) => { // Update the parameter name to avoid confusion with the outer loop
+      const anchor = document.createElement("a");
       anchor.href = link.url;
       anchor.textContent = link.title;
-      listItem.appendChild(anchor);
-      if (linkIndex < week.links.length - 1) {
-        listItem.appendChild(document.createTextNode(' | '));
+
+      if (i < week.links.length - 1) {
+        listItem.appendChild(anchor);
+        listItem.appendChild(document.createTextNode(" | "));
+      } else {
+        listItem.appendChild(anchor);
       }
     });
+
+    activitiesList.appendChild(listItem);
   });
 }
+
 
 getLinks();
