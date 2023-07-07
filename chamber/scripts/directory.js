@@ -1,6 +1,6 @@
-const mainJson = "data/members.json";
+const mainJson = "members.json";
 
-async function getMembers() {
+async function getMembers(mainJson) {
 	const response = await fetch(mainJson);
 	if (response.ok) {
 		const data = response.json();
