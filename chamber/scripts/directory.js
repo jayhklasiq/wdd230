@@ -1,4 +1,4 @@
-const mainJson = "members.json";
+const jsonfile = "members.json";
 
 async function getMembers(mainJson) {
 	const response = await fetch(mainJson);
