@@ -144,7 +144,7 @@ h3{
 }
 
 figure {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
