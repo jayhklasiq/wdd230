@@ -1,0 +1,101 @@
+{
+  "weeks": [
+    {
+      "week": "Week 1",
+      "links": [
+        {
+          "url": "week01/chamber-site-plan.html",
+          "title": "Layout"
+        },
+        {
+          "url": "week01/media-query.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "",
+          "title": "JS Pen"
+        }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "links": [
+        {
+          "url": "week02/design.html",
+          "title": "Design Principle"
+        },
+        {
+          "url": "https://codepen.io/jayhklasiq/pen/OJaPNQP",
+          "title": "CodePen"
+        },
+        {
+          "url": "week02/bom.html",
+          "title": "JS - Fav BOM Chapter"
+        }
+      ]
+    },
+    {
+      "week": "Week 3",
+      "links": [
+        {
+          "url": "week03/images/landscape.webp",
+          "title": "WebP"
+        },
+        {
+          "url": "week03/lazyload.html",
+          "title": "Lazy Load Exercise"
+        },
+        {
+          "url": "week03/responsive-images.html",
+          "title": "Responsive Images: srcset"
+        },
+        {
+          "url": "week03/bom.html",
+          "title": "BOM APP: Local Storage (Fav List)"
+        }
+      ]
+    },
+    {
+      "week": "Week 4",
+      "links": [
+        {
+          "url": "https://codepen.io/jayhklasiq/pen/MWzJwvO",
+          "title": "CSS Pseudo-Classes"
+        },
+        {
+          "url": "images/css-coombinators.png",
+          "title": "CSS Combinator Screenshot"
+        },
+        {
+          "url": "week04/tablebulild.html",
+          "title": "Table Build"
+        },
+        {
+          "url": "week04/form-start/index.html",
+          "title": "Forms Tutorials"
+        }
+      ]
+    },
+    {
+      "week": "Week 5",
+      "links": [
+        {
+          "url": "https://codepen.io/jayhklasiq/pen/WNYEbKJ",
+          "title": "CSS Pseudo-elements"
+        },
+        {
+          "url": "week05/new-ward-members.json",
+          "title": "JSON Family Record"
+        },
+        {
+          "url": "week05/prophets.html",
+          "title": "The Fetch API"
+        },
+        {
+          "url": "week05/weather.html",
+          "title": "Weather Activity"
+        }
+      ]
+    }
+  ]
+}
