@@ -4,13 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Accra Chamber of Commerce Homepage</title>
+		<title>Accra Chamber of Commerce Directory Page</title>
 		<meta
 			name="description"
-			content="This is the homepage for Accra Chamber of Commerce."
+			content="This is the Directory Page for Accra Chamber of Commerce."
 		/>
 		<meta name="author" content="Joshua O. Olaoye" />
-		<meta property="og:title" content="Chamber of Commerce Homepage" />
+		<meta property="og:title" content="Chamber of Commerce Directory Page" />
 		<meta property="og:type" content="website" />
 		<meta
 			property="og:image"
@@ -18,6 +18,7 @@
 		/>
 		<meta property="og:url" content="https://jayhklasiq.github.io/wdd230/" />
 		<script src="scripts/chamber-of-commerce.js" defer></script>
+		<script src="scripts/directory.js" defer></script>
 		<link rel="stylesheet" href="styles/normalize.css" />
 		<link rel="stylesheet" href="styles/base.css" />
 		<link rel="stylesheet" href="styles/larger.css" />
@@ -28,7 +29,7 @@
 			<img src="images/coc-header-image.webp" alt="COC Hero Image" />
 			<h1>ACCRA'S CHAMBER OF COMMERCE</h1>
 			<div class="join">
-				<a href="">Click to Join</a>
+				<a href>Click to Join</a>
 			</div>
 		</header>
 		<nav>
@@ -36,16 +37,20 @@
 			<ul class="navigation">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="discover.html">Discover</a></li>
-				<li><a href="">Directory</a></li>
-				<li><a href="">Join</a></li>
+				<li><a href="directory.html">Directory</a></li>
+				<li><a href="join.html">Join</a></li>
 			</ul>
 		</nav>
-		<main class="tk-page">
-			<h1>Your Request to Join is neing Processed.</h1>
-			<h3>
-				Thank you for signing up to join Accra Chamber of Commerce. We can't
-				wait to work with YOU
-			</h3>
+		<main class="directory-main">
+			<h1>Member Directory</h1>
+			<div class="toggle-view">
+				<label class="view">View:</label>
+				<select id="view-toggle" onchange="displayMembersView(this.value)">
+					<option value="grid">Grid View</option>
+					<option value="list">List View</option>
+				</select>
+			</div>
+			<div id="members-container"></div>
 		</main>
 		<footer>
 			<p>Accra Chamber of Commerce Project</p>

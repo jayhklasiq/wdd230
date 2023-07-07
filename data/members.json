@@ -1,0 +1,67 @@
+{
+	"members": [
+		{
+			"name": "Alpha Enterprise",
+			"address": "123 Main St, City A, Country A",
+			"phone": "123-456-7890",
+			"website": "https://www.alphaenterprise.com",
+			"image": "images/alpha.webp",
+			"membershipLevel": "Gold",
+			"otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		{
+			"name": "Beta Corporations",
+			"address": "456 Elm St, City B, Country B",
+			"phone": "987-654-3210",
+			"website": "https://www.betacorporations.com",
+			"image": "images/beta.webp",
+			"membershipLevel": "Silver",
+			"otherInfo": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+		},
+		{
+			"name": "Comma Industries",
+			"address": "789 Oak St, City C, Country C",
+			"phone": "555-123-4567",
+			"website": "https://www.commaindustries.com",
+			"image": "images/comma.webp",
+			"membershipLevel": "Silver",
+			"otherInfo": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+		},
+		{
+			"name": "Dave Corps.",
+			"address": "321 Pine St, City D, Country D",
+			"phone": "111-222-3333",
+			"website": "https://www.davecorps.com",
+			"image": "images/dave.webp",
+			"membershipLevel": "Silver",
+			"otherInfo": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+		},
+		{
+			"name": "Everest Enterprise",
+			"address": "555 Maple St, City E, Country E",
+			"phone": "444-555-6666",
+			"website": "https://www.everestenterprise.com",
+			"image": "images/everest.webp",
+			"membershipLevel": "Bronze",
+			"otherInfo": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+		},
+		{
+			"name": "Fiji Corps.",
+			"address": "777 Oak St, City F, Country F",
+			"phone": "777-888-9999",
+			"website": "https://www.fijicorps.com",
+			"image": "images/fiji.webp",
+			"membershipLevel": "Silver",
+			"otherInfo": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+		},
+		{
+			"name": "Grants Incorporated",
+			"address": "999 Elm St, City G, Country G",
+			"phone": "123-456-7890",
+			"website": "https://www.grantsincorporated.com",
+			"image": "images/grants.webp",
+			"membershipLevel": "NP",
+			"otherInfo": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+		}
+	]
+}

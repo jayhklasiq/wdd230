@@ -1,215 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima&family=Noto+Sans+Georgian:wght@300&display=swap');
-body{
-    font-family: "Noto Sans Georgian";
+@import url("https://fonts.googleapis.com/css2?family=Arima&family=Noto+Sans+Georgian:wght@300&display=swap");
+body {
+	font-family: "Noto Sans Georgian";
 }
-img{
-    width: 100%;
-    height: auto;
+img {
+	width: 100%;
+	height: auto;
 }
-h1{
-    font-family: "Arima";
-    text-align: center;
+h1 {
+	font-family: "Arima";
+	text-align: center;
 }
 
-nav{
-    background-color: #5CE1E6;  
+nav {
+	background-color: #5ce1e6;
 }
 
 /* Collapsing navigation on moblie screen */
-.nav-menu{
-    border: none;
-    font-size: 2rem;
-    padding: 3px 7px 6px;
-    background-color: #5CE1E6;
-    cursor: pointer;
+.nav-menu {
+	border: none;
+	font-size: 2rem;
+	padding: 3px 7px 6px;
+	background-color: #5ce1e6;
+	cursor: pointer;
 }
 
-.nav-menu::before{
-    content: "≡";
+.nav-menu::before {
+	content: "≡";
 }
 
-.navigation{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: 0;
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
 }
-.navigation li{
-    display: none;
+.navigation li {
+	display: none;
 }
-.navigation a{
-    display: block;
-    padding: 0.75rem;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;
 	text-decoration: none;
 }
-.navigation a:hover, navigation a:active{
-    color: #0077B6;
-    background-color: #CAF0F8;
+.navigation a:hover,
+navigation a:active {
+	color: #0077b6;
+	background-color: #caf0f8;
 }
 
-.open li{
-    display: block;
-    width: 100%;
+.open li {
+	display: block;
+	width: 100%;
 }
-.open li a{
-    display: block;
+.open li a {
+	display: block;
 }
-.nav-menu.open::before{
-    content: "X";
+.nav-menu.open::before {
+	content: "X";
 }
-main{
-    text-align: center;
-    display: grid;
-    grid-template-rows: 1fr 1fr auto auto;
-    grid-gap: .75rem;
-}
-
-header,.newsletter-box, .weather-card{
-    background-color: #CAF0F8
+main {
+	text-align: center;
+	display: grid;
+	grid-template-rows: 1fr 1fr auto auto;
+	grid-gap: 0.75rem;
 }
 
-.weather-card, .newsletter-box, footer{
-    border: 1px;
-    padding: 1rem;
-    margin: 1rem;
+header,
+.newsletter-box,
+.weather-card {
+	background-color: #caf0f8;
 }
 
-.newsletter-box{
-    grid-row: 1/2;
-}
-.weather-card{
-    grid-row: 2/3;
-}
-.current-events{
-    grid-row: 3/4;
-}
-.adverts{
-    grid-row: 4/5;
+.weather-card,
+.newsletter-box,
+footer {
+	border: 1px;
+	padding: 1rem;
+	margin: 1rem;
 }
 
-footer{
-    text-align: center;
-    color: #00B4D8;
-    background-color: black;
+.newsletter-box {
+	grid-row: 1/2;
 }
-.socials{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 100px;
-
+.weather-card {
+	grid-row: 2/3;
+}
+.current-events {
+	grid-row: 3/4;
+}
+.adverts {
+	grid-row: 4/5;
 }
 
-
+footer {
+	text-align: center;
+	color: #00b4d8;
+	background-color: black;
+}
+.socials {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-around;
+	max-width: 100px;
+}
 
 /* For the Discovery Page! */
 .discovery-main {
-    flex-wrap: wrap;
-    grid-template-rows: 1fr;
+	flex-wrap: wrap;
+	grid-template-rows: 1fr;
 }
-.message{
-    font-family: Arima, sans-serif;
-    font-weight: 700;
+.message {
+	font-family: Arima, sans-serif;
+	font-weight: 700;
 }
 .map,
 .calendar,
 .mainarea {
-    flex-basis: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
+	flex-basis: 100%;
+	margin-right: 0;
+	margin-bottom: 20px;
 }
 .map-container,
 .calendar-container {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  overflow: hidden;
+	position: relative;
+	width: 400px;
+	height: 200px;
+	overflow: hidden;
 }
 
 .map-container iframe,
 .calendar-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 .calendar-container iframe {
-    border: solid 1px #777;
-    width: 100%;
-    height: 100%;
+	border: solid 1px #777;
+	width: 100%;
+	height: 100%;
 }
 
 /* For the Join Page */
-.join-main{
-    display: block;
+.join-main {
+	display: block;
 }
-form fieldset legend{
-    padding: 0 .5rem;
+form fieldset legend {
+	padding: 0 0.5rem;
 }
-form fieldset{
-    font-weight: 800;
-    font-size: large;
-    text-align: left;
-    margin: 0 auto;
-    padding: 1rem 2.50rem 0 .50rem;
-    border: 1px solid #0077B6;
-    border-radius: 8px;
+form fieldset {
+	font-weight: 800;
+	font-size: large;
+	text-align: left;
+	margin: 0 auto;
+	padding: 1rem 2.5rem 0 0.5rem;
+	border: 1px solid #0077b6;
+	border-radius: 8px;
 }
-form label, form label span{
-    display: block;
-    padding-bottom: 1rem;
+form label,
+form label span {
+	display: block;
+	padding-bottom: 1rem;
 }
-form label input,form label #membership-level{
-    display: block;
-    padding: .75rem;
-    border: 1px solid #0077B6;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 20rem;
-    font-size: 1rem;
+form label input,
+form label #membership-level {
+	display: block;
+	padding: 0.75rem;
+	border: 1px solid #0077b6;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 20rem;
+	font-size: 1rem;
 }
-form label input:required{
-    border-left: 5px solid red;
+form label input:required {
+	border-left: 5px solid red;
 }
-form label input:required:valid{
-    border-left: 5px solid #5CE1E6;
+form label input:required:valid {
+	border-left: 5px solid #5ce1e6;
+}
+form label #membership-level,
+form label::placeholder {
+	font-size: 16px;
+}
+textarea {
+	display: block;
+	width: 355px;
+	height: 125px;
+	border: 1px solid #0077b6;
+	border-radius: 5px;
+}
 
+form .submitButton {
+	font-weight: 800;
+	font-size: large;
+	margin-top: 1rem;
+	width: 100%;
+	padding: 0.75rem 2%;
+	border: #5ce1e6 1px solid;
+	border-radius: 5px;
+	font-family: Arima;
+	max-width: 22rem;
+	background-color: #5ce1e6;
 }
-form label #membership-level, form label::placeholder{
-    font-size: 16px;
+.membership-benefits div ul li {
+	list-style: none;
 }
-textarea{
-    display: block;
-    width: 355px;
-    height: 125px;
-    border: 1px solid #0077B6;
-    border-radius: 5px;
-}
-
-form .submitButton{
-    font-weight: 800;
-    font-size: large;
-    margin-top: 1rem;
-    width: 100%;
-    padding: .75rem 2%;
-    border: #5CE1E6 1px solid;
-    border-radius: 5px;
-    font-family: Arima;
-    max-width: 22rem;
-    background-color: #5CE1E6;
-}
-.membership-benefits div ul li{
-    list-style: none;
-}
-.membership-benefits div p{
-    font-weight: 800;
-    font-size: large;
+.membership-benefits div p {
+	font-weight: 800;
+	font-size: large;
 }
 /* For Thank YOU Page */
-.tk-page{
-    display: block;
+.tk-page {
+	display: block;
+}
+
+/* For Directory Page */
+.toggle-view {
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+}
+#view-toggle {
+	font-size: 16px;
+}
+.member-card {
+	border: 1px solid #ccc;
+	padding: 10px;
 }
