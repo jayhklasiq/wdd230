@@ -1,4 +1,4 @@
-const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
+const url = './data/members.json';
 
 async function getProphetData() {
 	const response = await fetch(url);
