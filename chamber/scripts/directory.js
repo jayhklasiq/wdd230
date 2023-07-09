@@ -1,7 +1,5 @@
-const cardList = document.querySelector(".card-list");
-const directoryURL = "/data/members.json";
-
-// Add your JavaScript code here
+const directoryURL = "https://github.com/jayhklasiq/wdd230/blob/master/chamber/data/members.json";
+const page = document.querySelector('directory-main')
 document.getElementById('view-toggle').addEventListener('change', async function () {
     let view = this.value;
     await displayMembersView(view);
@@ -9,17 +7,16 @@ document.getElementById('view-toggle').addEventListener('change', async function
 
 async function displayMembersView(view) {
     let members = []; // Load members data from the JSON source
-    try {
-        // Fetch JSON data
-        let response = await fetch(directoryURL);
-        if (!response.ok) {
-            const data = await response.json();
-            console.log(data);
-            members = data.members;
-            renderMembersView(view);
-        }
-    } catch (error) {
-        console.error('Error fetching member data:', error);
+    // Fetch JSON data
+    const response = await fetch(directoryURL);
+    if (!response.ok) {
+        const data = await response.json();
+        console.log(data);
+        members = data.members;
+        renderMembersView(view);
+    }
+    else {
+        console.error('Error fetching member data');
     }
 }
 
