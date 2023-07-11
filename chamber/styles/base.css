@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima&family=Noto+Sans+Georgian:wght@300&display=swap");
+
 body {
 	font-family: "Noto Sans Georgian";
 }
+
 img {
 	width: 100%;
 	height: auto;
 }
+
 h1 {
 	font-family: "Arima";
 	text-align: center;
@@ -34,9 +37,11 @@ nav {
 	list-style: none;
 	margin: 0;
 }
+
 .navigation li {
 	display: none;
 }
+
 .navigation a {
 	display: block;
 	padding: 0.75rem;
@@ -45,6 +50,7 @@ nav {
 	font-size: 20px;
 	text-decoration: none;
 }
+
 .navigation a:hover,
 navigation a:active {
 	color: #0077b6;
@@ -55,12 +61,15 @@ navigation a:active {
 	display: block;
 	width: 100%;
 }
+
 .open li a {
 	display: block;
 }
+
 .nav-menu.open::before {
 	content: "X";
 }
+
 main {
 	text-align: center;
 	display: grid;
@@ -85,12 +94,15 @@ footer {
 .newsletter-box {
 	grid-row: 1/2;
 }
+
 .weather-card {
 	grid-row: 2/3;
 }
+
 .current-events {
 	grid-row: 3/4;
 }
+
 .adverts {
 	grid-row: 4/5;
 }
@@ -100,6 +112,7 @@ footer {
 	color: #00b4d8;
 	background-color: black;
 }
+
 .socials {
 	display: inline-flex;
 	flex-direction: row;
@@ -112,10 +125,12 @@ footer {
 	flex-wrap: wrap;
 	grid-template-rows: 1fr;
 }
+
 .message {
 	font-family: Arima, sans-serif;
 	font-weight: 700;
 }
+
 .map,
 .calendar,
 .mainarea {
@@ -123,6 +138,7 @@ footer {
 	margin-right: 0;
 	margin-bottom: 20px;
 }
+
 .map-container,
 .calendar-container {
 	position: relative;
@@ -139,6 +155,7 @@ footer {
 	width: 100%;
 	height: 100%;
 }
+
 .calendar-container iframe {
 	border: solid 1px #777;
 	width: 100%;
@@ -149,9 +166,11 @@ footer {
 .join-main {
 	display: block;
 }
+
 form fieldset legend {
 	padding: 0 0.5rem;
 }
+
 form fieldset {
 	font-weight: 800;
 	font-size: large;
@@ -161,11 +180,13 @@ form fieldset {
 	border: 1px solid #0077b6;
 	border-radius: 8px;
 }
+
 form label,
 form label span {
 	display: block;
 	padding-bottom: 1rem;
 }
+
 form label input,
 form label #membership-level {
 	display: block;
@@ -176,16 +197,20 @@ form label #membership-level {
 	max-width: 20rem;
 	font-size: 1rem;
 }
+
 form label input:required {
 	border-left: 5px solid red;
 }
+
 form label input:required:valid {
 	border-left: 5px solid #5ce1e6;
 }
+
 form label #membership-level,
 form label::placeholder {
 	font-size: 16px;
 }
+
 textarea {
 	display: block;
 	width: 355px;
@@ -206,13 +231,16 @@ form .submitButton {
 	max-width: 22rem;
 	background-color: #5ce1e6;
 }
+
 .membership-benefits div ul li {
 	list-style: none;
 }
+
 .membership-benefits div p {
 	font-weight: 800;
 	font-size: large;
 }
+
 /* For Thank YOU Page */
 .tk-page {
 	display: block;
@@ -223,15 +251,62 @@ form .submitButton {
 	margin-bottom: 20px;
 	font-weight: 700;
 }
+
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 20px;
 }
-#view-toggle {
-	font-size: 16px;
-}
-.member-card {
+
+.memberCards {
 	border: 1px solid #ccc;
 	padding: 10px;
+}
+
+/* for directory page */
+.directory-main {
+	display: block;
+}
+
+#grid,
+#list {
+	font-weight: 500;
+	font-weight: 800;
+	font-size: large;
+	margin-top: 1rem;
+	width: 150px;
+	padding: 0.75rem 2%;
+	border: #5ce1e6 1px solid;
+	border-radius: 5px;
+	font-family: Arima;
+	max-width: 22rem;
+	background-color: #5ce1e6;
+}
+
+table {
+	margin: 0 auto;
+}
+
+
+td a,
+div .grid a {
+	text-decoration: none;
+}
+
+.list tr {
+	display: grid;
+	grid-template-columns: 45% 55%;
+	width: 100%;
+	justify-items: center;
+	font-weight: 600;
+	padding: .5rem;
+}
+
+div .grid {
+	padding: .75rem;
+	font-weight: 600;
+}
+
+div .grid img {
+	padding-bottom: .5rem;
 }

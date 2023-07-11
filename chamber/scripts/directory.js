@@ -1,83 +1,125 @@
-const directoryURL = "https://github.com/jayhklasiq/wdd230/blob/master/chamber/data/members.json";
-const page = document.querySelector('directory-main')
-document.getElementById('view-toggle').addEventListener('change', async function () {
-    let view = this.value;
-    await displayMembersView(view);
-});
+const directoryURL = "data/members.json";
+const memberCard = document.querySelector("#memberCard");
 
-async function displayMembersView(view) {
-    let members = []; // Load members data from the JSON source
-    // Fetch JSON data
-    const response = await fetch(directoryURL);
-    if (!response.ok) {
-        const data = await response.json();
-        console.log(data);
-        members = data.members;
-        renderMembersView(view);
-    }
-    else {
-        console.error('Error fetching member data');
-    }
+function MakeGridCard(member) {
+  const gridCard = document.createElement('div');
+  gridCard.setAttribute('class', 'grid');
+
+  const img = document.createElement('img');
+  img.setAttribute('src', member.image);
+  img.setAttribute('alt', member.name);
+  img.setAttribute('loading', 'lazy');
+  gridCard.appendChild(img);
+
+  const address = document.createElement('address');
+  address.textContent = member.address;
+  gridCard.appendChild(address);
+
+  const phone = document.createElement('p');
+  phone.textContent = member.phone;
+  gridCard.appendChild(phone);
+
+  const website = document.createElement('a');
+  website.setAttribute('href', member.website);
+  website.setAttribute('target', '_blank');
+  website.textContent = member.website;
+  gridCard.appendChild(website);
+
+  return gridCard;
 }
 
-function renderMembersView(view) {
-    let container = document.getElementById('members-container');
-    container.innerHTML = '';
+function MakeListCard(members) {
+  const tr = document.createElement('tr');
 
-    if (view === 'grid') {
-        let gridContainer = document.createElement('div');
-        gridContainer.className = 'grid-container';
+  const nameTd = document.createElement('td');
+  nameTd.className = 'name';
+  const nameText = document.createTextNode(members.name);
+  nameTd.appendChild(nameText);
+  tr.appendChild(nameTd);
 
-        members.forEach(function (member) {
-            let card = createMemberCard(member);
-            gridContainer.appendChild(card);
-        });
+  const addressTd = document.createElement('td');
+  addressTd.className = 'list-address';
+  const addressText = document.createTextNode(members.address);
+  addressTd.appendChild(addressText);
+  tr.appendChild(addressTd);
 
-        container.appendChild(gridContainer);
-    } else if (view === 'list') {
-        let listContainer = document.createElement('div');
-        listContainer.className = 'list-container';
+  const phoneTd = document.createElement('td');
+  phoneTd.className = 'list-number';
+  const phoneText = document.createTextNode(members.phone);
+  phoneTd.appendChild(phoneText);
+  tr.appendChild(phoneTd);
 
-        members.forEach(function (member) {
-            let listItem = createMemberListItem(member);
-            listContainer.appendChild(listItem);
-        });
+  const websiteTd = document.createElement('td');
+  const websiteLink = document.createElement('a');
+  websiteLink.href = members.website;
+  websiteLink.target = '_blank';
+  const websiteText = document.createTextNode(members.website);
+  websiteLink.appendChild(websiteText);
+  websiteTd.appendChild(websiteLink);
+  tr.appendChild(websiteTd);
 
-        container.appendChild(listContainer);
-    }
+  return tr;
 }
 
-function createMemberCard(member) {
-    let card = document.createElement('div');
-    card.className = 'member-card';
 
-    // Build the member card HTML structure using the member object properties
-    let html = '<h2>' + member.name + '</h2>' +
-        '<p>' + member.address + '</p>' +
-        '<p>Phone: ' + member.phone + '</p>' +
-        '<p>Website: <a href="' + member.website + '">' + member.website + '</a></p>' +
-        '<img src="' + member.image + '" alt="Company Logo">' +
-        '<p>Membership Level: ' + member.membershipLevel + '</p>' +
-        '<p>' + member.otherInfo + '</p>';
+async function getmembers() {
+  const response = await fetch(directoryURL);
+  const data = await response.json();
+  console.log(data);
+  ListView(data.members);
 
-    card.innerHTML = html;
-    return card;
+  document.querySelector("#grid").addEventListener("click", () => GridView(data.members));
+  document.querySelector("#list").addEventListener("click", () => ListView(data.members));
 }
 
-function createMemberListItem(member) {
-    let listItem = document.createElement('div');
+function ListView(members) {
+  // Change button color to currently active
+  const gridBtn = document.querySelector("#grid");
+  const listBtn = document.querySelector("#list");
 
-    // Build the list item HTML structure using the member object properties
-    let html = '<h3>' + member.name + '</h3>' +
-        '<p>' + member.address + '</p>' +
-        '<p>Phone: ' + member.phone + '</p>' +
-        '<p>Website: <a href="' + member.website + '">' + member.website + '</a></p>' +
-        '<p>Membership Level: ' + member.membershipLevel + '</p>' +
-        '<p>' + member.otherInfo + '</p>';
+  gridBtn.style.backgroundColor = "";
+  listBtn.style.backgroundColor = "#A9D6E5";
 
-    listItem.innerHTML = html;
-    return listItem;
+  // Clear the memberCard container
+  memberCard.innerHTML = "";
+
+  // Create a table element
+  const table = document.createElement("table");
+  table.className = "list";
+
+  // Create table body
+  const tbody = document.createElement("tbody");
+
+  // Iterate over members and create table rows
+  members.forEach(member => {
+    const row = MakeListCard(member);
+    tbody.appendChild(row);
+  });
+
+  // Append tbody to the table
+  table.appendChild(tbody);
+
+  // Append the table to the memberCard container
+  memberCard.appendChild(table);
 }
 
-// Initialize view as 'grid' or 'list'
-displayMembersView('grid');
+function GridView(members) {
+  const gridBtn = document.querySelector("#grid");
+  const listBtn = document.querySelector("#list");
+
+  gridBtn.style.backgroundColor = "#A9D6E5";
+  listBtn.style.backgroundColor = "";
+
+  memberCard.innerHTML = "";
+
+  const section = document.createElement('section');
+
+  members.forEach(member => {
+    const card = MakeGridCard(member);
+    section.appendChild(card);
+    card.className = "grid";
+  });
+  memberCard.appendChild(section);
+}
+
+getmembers();
