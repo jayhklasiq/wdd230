@@ -37,24 +37,31 @@
 			</ul>
 		</nav>
 		<main>
-			<div class="newsletter-box">
+			<form method="get" action="thankyou.html" class="newsletter-box">
 				<h2>Sign Up for Newslettter</h2>
-				<p>Name: <input type="text" placeholder="Your Name here" /></p>
-				<p>Email: <input type="email" placeholder="Your Email Address" /></p>
-			</div>
+				<label>Full Name<input type="text" title="Full Name" id="fullname" required name="fullname"></label>
+				<label>Email*<input type="email" id="email" name="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]{2,}" placeholder="someone@gmail.com" required></label>
+				<input type="submit" value="Send Me Updates" class="emailList">
+			</form>
 			<div class="current-events">
 				<h2>Welcome to Accra Chamber of Commerce Homepage</h2>
-				<p></p>
+				<p>Ghana National Chamber of Commerce and Industry is a quasi-government body established by an Act of Parliament, with Legislative Instrument (611 of 1968, ACT 232) to serve as the voice and leader of the Ghana business community to promote growth and development of the private sector in through Business Advocacy, Research, Capacity Building, Trade and Investment Missions, Business Match-Making, Business Workshops and Seminars, Export Documentation, General Business Support Services etc.</p>
 			</div>
 			<div class="weather-card">
 				<h2>Today's Weather</h2>
 				<h3>Accra, Ghana.</h3>
 				<p>The current temperature is: <span class="temperature"></span></p>
-				<img src="" alt="" loading="lazy">
-				<span class="weather-description"></span>
+				<figure>Description | <figcaption></figcaption>
+					<img class="weather-img" src="-" alt="-">
+				</figure>
 			</div>
-			<div class="adverts">
-				<h2>Our Partners</h2>
+			<div>
+				<h2>Companies in Our Directory</h2>
+				<div id="ad-container" class="ad-container"></div>
+			</div>
+			<div id="banner" class="banner">
+				<span class="close-button" onclick="closeBanner()">X</span>
+				<p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
 			</div>
 		</main>
 		<footer>

@@ -61,7 +61,6 @@ function MakeListCard(members) {
   return tr;
 }
 
-
 async function getmembers() {
   const response = await fetch(directoryURL);
   const data = await response.json();

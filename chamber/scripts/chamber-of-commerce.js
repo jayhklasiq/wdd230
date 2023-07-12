@@ -55,7 +55,117 @@ if (discovery) {
 	});
 }
 
-const form = document.querySelector("form");
+const form = document.querySelector(".join-main");
 if (form) {
 	document.getElementById("timestamp").value = new Date().toISOString();
 }
+
+const weatherCard = document.querySelector('.weather-card');
+if (weatherCard) {
+	const currentTemp = document.querySelector('.temperature');
+	const weatherIcon = document.querySelector('.weather-img');
+	let captionDesc = document.querySelector('figcaption');
+
+	const url = 'https://api.openweathermap.org/data/2.5/weather?lat=5.5681359394105298&lon=-0.1935976015832197&appid=7c71213c74f3ed66fde3c04f0ecec19c';
+	async function apiFetch(url) {
+		try {
+			const response = await fetch(url);
+			if (response.ok) {
+				const data = await response.json();
+				// console.log(data);
+				displayResults(data);
+			} else {
+				throw new Error("API request failed");
+			}
+		} catch (error) {
+			console.log(error);
+			console.log("There is an error fetching weather data.")
+		}
+	}
+	function displayResults(data) {
+		currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+		const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+		let desc = data.weather[0].description;
+		weatherIcon.setAttribute('src', iconsrc);
+		weatherIcon.setAttribute('alt', desc);
+		weatherIcon.setAttribute('width', '50px')
+		captionDesc.textContent = `${desc}`;
+	}
+	apiFetch(url);
+
+
+	// Function to generate random number within a range
+	function getRandomNumber(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	// Function to display the banner
+	function displayBanner() {
+		const banner = document.getElementById("banner");
+		let today = new Date();
+		let dayOfWeek = today.getDay();
+		if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+			banner.style.display = "block";
+		}
+	}
+
+	// Function to close the banner
+	function closeBanner() {
+		const banner = document.getElementById("banner");
+		banner.style.display = "none";
+	}
+
+	// Function to load spotlight advertisements
+	async function loadAdvertisements() {
+		const adContainer = document.getElementById("ad-container")
+		try {
+			// Fetch the members data from the JSON file
+			const response = await fetch("data/members.json");
+			const data = await response.json();
+
+			let qualifiedMembers = data.members.filter(function (member) {
+				return member.membershipLevel === "Silver" || member.membershipLevel === "Gold";
+			});
+
+			for (let i = 0; i < 2; i++) {
+				let randomIndex = getRandomNumber(0, qualifiedMembers.length - 1);
+				const member = qualifiedMembers[randomIndex];
+
+				const ad = document.createElement("div");
+				ad.className = "ad";
+				ad.innerHTML = member.name;
+				adContainer.appendChild(ad);
+
+				qualifiedMembers.splice(randomIndex, 1);
+			}
+		} catch (error) {
+			console.error("Failed to load members data:", error);
+		}
+	}
+
+	// Load advertisements and display the banner on page load
+	window.onload = function () {
+		loadAdvertisements();
+		displayBanner();
+	};
+}
+
+
+const forecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=5.57&lon=-0.2&appid=7c71213c74f3ed66fde3c04f0ecec19c';
+
+async function weatherForecast(forecast) {
+	try {
+		const response = await fetch(forecast);
+		if (response.ok) {
+			const data = await response.json();
+			console.log(data);
+			// displayResults(data)
+		} else {
+			throw new Error("API request failed");
+		}
+	} catch (error) {
+		console.log(error);
+		console.log("There is an error fetching weather data.")
+	}
+}
+weatherForecast();

@@ -4,7 +4,7 @@ body {
 	font-family: "Noto Sans Georgian";
 }
 
-img {
+.d-gallery img {
 	width: 100%;
 	height: auto;
 }
@@ -111,6 +111,71 @@ footer {
 	text-align: center;
 	color: #00b4d8;
 	background-color: black;
+}
+
+.newsletter-box label {
+	display: block;
+	margin-right: 5rem;
+	padding-bottom: 1rem;
+	text-align: left;
+}
+
+.banner {
+	display: none;
+	background-color: #f2f2f2;
+	padding: 10px;
+	text-align: center;
+	grid-column: 1/3;
+}
+
+.close-button {
+	float: right;
+	cursor: pointer;
+}
+
+.ad-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.ad {
+	width: 30%;
+	background-color: #e9e9e9;
+	padding: 10px;
+	text-align: center;
+}
+
+.newsletter-box .emailList {
+	font-weight: 800;
+	font-size: large;
+	margin-top: 1rem;
+	width: 100%;
+	padding: 0.75rem 2%;
+	border: #5ce1e6 1px solid;
+	border-radius: 5px;
+	font-family: Arima;
+	max-width: 22rem;
+	background-color: #5ce1e6;
+}
+
+.newsletter-box label input {
+	display: block;
+	padding: 0.75rem;
+	border: 1px solid #00b4d8;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 20rem;
+	font-size: 1rem;
+}
+
+figure img {
+	display: block;
+	margin: 0 auto;
+}
+
+figcaption {
+	display: inline-block;
 }
 
 .socials {
