@@ -16,7 +16,12 @@ h1 {
 	font-family: "Arima";
 	text-align: center;
 }
+.join a {
+	font-family: "Arima";
+	font-size: 24px;
+	font-weight: 400;
 
+}
 nav {
 	background-color: #5ce1e6;
 }
