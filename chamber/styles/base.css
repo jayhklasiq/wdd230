@@ -331,7 +331,9 @@ form .submitButton {
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 20px;
 }
-
+.grid img{
+	width: 100%;
+}
 .memberCards {
 	border: 1px solid #ccc;
 	padding: 10px;
