@@ -151,21 +151,21 @@ if (weatherCard) {
 }
 
 
-const forecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=5.57&lon=-0.2&appid=7c71213c74f3ed66fde3c04f0ecec19c';
+// const forecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=5.57&lon=-0.2&appid=7c71213c74f3ed66fde3c04f0ecec19c';
 
-async function weatherForecast(forecast) {
-	try {
-		const response = await fetch(forecast);
-		if (response.ok) {
-			const data = await response.json();
-			console.log(data);
-			// displayResults(data)
-		} else {
-			throw new Error("API request failed");
-		}
-	} catch (error) {
-		console.log(error);
-		console.log("There is an error fetching weather data.")
-	}
-}
-weatherForecast();
+// async function weatherForecast(forecast) {
+// 	try {
+// 		const response = await fetch(forecast);
+// 		if (response.ok) {
+// 			const data = await response.json();
+// 			console.log(data);
+// 			// displayResults(data)
+// 		} else {
+// 			throw new Error("API request failed");
+// 		}
+// 	} catch (error) {
+// 		console.log(error);
+// 		console.log("There is an error fetching weather data.")
+// 	}
+// }
+// weatherForecast();
