@@ -54,10 +54,12 @@ nav {
 	text-decoration: none;
 }
 
-.navigation a:hover,
-navigation a:active {
+.navigation a:hover{
 	color: #0077b6;
 	background-color: #caf0f8;
+}
+.navigation li a:active{
+	background-color: aquamarine;
 }
 
 .open li {
