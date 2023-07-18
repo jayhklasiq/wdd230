@@ -4,6 +4,9 @@ body {
 	font-family: "Noto Sans Georgian";
 }
 
+header img{
+	width: 100%;
+}
 .d-gallery img {
 	width: 100%;
 	height: auto;
@@ -69,10 +72,10 @@ navigation a:active {
 .nav-menu.open::before {
 	content: "X";
 }
-
+/* Homepage settings*/
 main {
 	text-align: center;
-	display: grid;
+	display: block;
 	grid-template-rows: 1fr 1fr auto auto;
 	grid-gap: 0.75rem;
 }
@@ -185,12 +188,18 @@ figcaption {
 	max-width: 100px;
 }
 
-/* For the Discovery Page! */
-.discovery-main {
-	flex-wrap: wrap;
-	grid-template-rows: 1fr;
+a img{
+	max-width: 42px;
 }
 
+/* For the Discovery Page! */
+.discovery-main{
+	display: block;
+}
+
+div .sidebar{
+	display: grid;
+}
 .message {
 	font-family: Arima, sans-serif;
 	font-weight: 700;
@@ -207,7 +216,7 @@ figcaption {
 .map-container,
 .calendar-container {
 	position: relative;
-	width: 400px;
+	width: 100%;
 	height: 200px;
 	overflow: hidden;
 }
@@ -328,7 +337,6 @@ form .submitButton {
 	padding: 10px;
 }
 
-/* for directory page */
 .directory-main {
 	display: block;
 }
@@ -351,7 +359,6 @@ form .submitButton {
 table {
 	margin: 0 auto;
 }
-
 
 td a,
 div .grid a {
